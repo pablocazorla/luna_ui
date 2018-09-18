@@ -1,0 +1,31 @@
+@lnt-footer-height:60px;
+html {
+  height: 100%;
+}
+
+body{
+  
+  position: relative;
+  padding-bottom: @lnt-footer-height + 20px;
+  min-height: 100%;
+}
+
+.lnt-header{
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+}
+.lnt-footer{
+  position: absolute;
+  bottom: 0px;
+    left: 0px;
+    right: 0px;
+  background-color: #888;
+  color:#FFF;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  height: @lnt-footer-height;
+  line-height: @lnt-footer-height;
+}

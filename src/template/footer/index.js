@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import {  Link } from 'react-router-dom';
-import I18N from '../../I18N';
 
 export default class Footer extends Component {
   // constructor(props) {
@@ -12,10 +10,8 @@ export default class Footer extends Component {
   // componentDidMount () {
   // }
   render() {
-    return <footer>
-      <h2>Footer</h2>
-      <Link to="/"><I18N id="Home"/></Link>
-      <Link to="/about-us"><I18N id="About"/></Link>
+    return <footer className="lnt-footer">
+      &copy; 2018 - Luna UI
     </footer>;
   }
 };

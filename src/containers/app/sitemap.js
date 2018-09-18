@@ -3,13 +3,10 @@ const sitemap = {
     path: '/',
     component: 'home'
   },
-  'about': {
-    title: 'About',
-    title_es: 'Nosotros',
-    path: '/about-us',
-    path_es: '/nosotros',
-    component: 'about'
-  }
+  // 'about': {
+  //   path: '/about-us',
+  //   component: 'about'
+  // }
 };
 
 export default sitemap;

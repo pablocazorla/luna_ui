@@ -1,15 +1,14 @@
 import { combineReducers } from 'redux';
 import { actName } from './actions';
-import {defaultLanguage} from '../../config';
 
 let reducers = {};
 
-reducers.language = (state, action) => {
+reducers.data = (state = null, action) => {
   switch (action.type) {
-    case actName.SET_LANG:        
-      return action.lang;
+    case actName.FETCH_DATA_SUCCESS:        
+      return action.data;
     default:
-      return state || defaultLanguage;
+      return state;
   }
 };
 

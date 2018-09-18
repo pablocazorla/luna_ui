@@ -1,13 +1,14 @@
 export const actName = {
-  SET_LANG: 'SET_LANG_APP'
+  FETCH_DATA: 'FETCH_DATA',
+  FETCH_DATA_SUCCESS: 'FETCH_DATA_SUCCESS',
+  FETCH_DATA_ERROR: 'FETCH_DATA_ERROR',
 }
 
 export default {
-  setLanguage: (lang) => {
+  fetchData: () => {
 		return (dispatch) => {
 			dispatch({
-        type: actName.SET_LANG,
-        lang
+        type: actName.FETCH_DATA
       });
 		}
   }

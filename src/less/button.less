@@ -1,0 +1,106 @@
+
+.buttonColors(@bgcolor){
+  border-color: @bgcolor;
+  background-color: @bgcolor;
+  &, * {
+    color:#FFF;
+  }
+  
+  @lightenPercent: 9%;
+
+  &.outlined{
+    &, * {
+      color: @bgcolor;
+    }
+    background-color: transparent;
+    &:hover,&:active,&:focus{
+      &, * {
+        color:#FFF;
+      }
+    }
+  }
+
+  &:hover{
+    border-color: lighten(@bgcolor,@lightenPercent);
+    background-color: lighten(@bgcolor,@lightenPercent);
+  }
+  &:active,&:focus{
+    border-color: darken(@bgcolor,@lightenPercent);
+    background-color: darken(@bgcolor,@lightenPercent);
+  }
+}
+
+.buttonSizes(@size,@text){
+  font-size: @text;
+  line-height: @size;
+  height: @size;
+  &.rounded{
+    border-radius: 0.5 * @size;
+  }
+  &.circular{
+    width: @size;
+  }
+}
+
+.@{px}button {
+  display: inline-block;
+  padding: @button-padding;
+  line-height: @size-normal;
+  height: @size-normal;
+  .unwrap;
+  .uppercase;
+  .medium;
+  text-align: center;
+  background-color: transparent;
+  background-image: none;
+  cursor: pointer;
+  border: 1px solid @color-border;
+  border-radius: @border-radius;
+  color:@color-text-light;
+  .transition(all .2s);
+  text-decoration: none;
+
+  // Shape
+  &.rounded{
+    border-radius: 0.5 * @size-normal;
+  }
+  &.squared{
+    border-radius: 0;
+  }
+  &.circular{
+    border-radius: 50%;
+    padding:0;
+    width: @size-normal;
+  }
+
+  // Color
+  &.@{px}primary{
+    .buttonColors(@color-primary);
+  }
+  &.@{px}secondary{
+    .buttonColors(@color-secondary);
+  }
+  &.@{px}danger{
+    .buttonColors(@color-danger);
+  } 
+  &.@{px}warning{
+    .buttonColors(@color-warning);
+  } 
+  &.@{px}success{
+    .buttonColors(@color-success);
+  }
+  &.@{px}info{
+    .buttonColors(@color-info);
+  } 
+
+  // Size
+  &.small{
+    .buttonSizes(@size-small,@text-small);
+  }
+  &.big{
+    .buttonSizes(@size-big,@text-big);
+  }
+  &.huge{
+    .buttonSizes(@size-huge,@text-huge);
+  }
+}

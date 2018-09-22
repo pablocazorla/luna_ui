@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import actions from '../../redux/app/actions';
 import {Container} from '../../components';
+import Buttons from '../../samples/buttons';
 //import Helmet from '../../comps/helmet';
 
 
@@ -19,6 +20,7 @@ class HomeVisual extends Component {
     return <Container>
       {/* <Helmet title="Home"/> */}
       <h1>Home</h1>
+      <Buttons/>
     </Container>
   }
 };
